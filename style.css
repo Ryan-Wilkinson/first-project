@@ -62,11 +62,19 @@ h2 {
 
 #hangmanBody {
 	height: 70px;
-	width: 25px;
-	margin-left: 170px;
+	width: 23px;
+	margin-left: 171px;
 	background-color: green;
 }
 
+#hangmanLarm {
+	height: 45px;
+	width: 10px;
+	margin-left: 151px;
+	margin-top: -85px;
+	transform: rotate(-45deg);
+	background-color: green;
+}
 
 
 
