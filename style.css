@@ -16,4 +16,29 @@ h2 {
 
 #game {
 	display: flex;
+	margin-left: 50px;
+}
+
+#gallowsPole {
+	height: 250px;
+	width: 10px;
+	margin-top: -260px;
+	margin-left: 50px;
+	background-color: black;
+}
+
+#gallowsBase {
+	height: 10px;
+	width: 250px;
+	margin-top: 260px;
+	background-color: black;
+	
+}
+
+#gallowsTop {
+	height: 10px;
+	width: 140px;
+	margin-top: -260px;
+	margin-left: 50px;
+	background-color: black;
 }
