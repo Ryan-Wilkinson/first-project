@@ -24,7 +24,8 @@ h2 {
 }
 
 #gallows {
-	padding-bottom: 85px;
+	height: 275px;
+	width: 250px;
 }
 
 #gallowsPole {
