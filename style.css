@@ -76,9 +76,14 @@ h2 {
 	background-color: green;
 }
 
-
-
-
+#hangmanRarm {
+	height: 45px;
+	width: 10px;
+	margin-left: 204px;
+	margin-top: -45px;
+	transform: rotate(45deg);
+	background-color: green;
+}
 
 
 
