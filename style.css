@@ -1,0 +1,15 @@
+h1 {
+	text-align: center;
+	font-size: 70px;
+}
+
+h2 {
+	text-align: center;
+	margin-top: -30px;
+}
+
+
+
+#game {
+	display: flex;
+}
