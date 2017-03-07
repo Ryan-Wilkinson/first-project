@@ -60,6 +60,12 @@ h2 {
 	background-color: pink;
 }
 
+#hangmanBody {
+	height: 70px;
+	width: 25px;
+	margin-left: 170px;
+	background-color: green;
+}
 
 
 
