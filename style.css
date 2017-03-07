@@ -42,13 +42,13 @@ h2 {
 	margin-left: 50px;
 	background-color: black;
 }
-
+	
 #gallowsRope {
 	height: 30px;
 	width: 6px;
-	margin-left: 50px;
-	margin-top: -260px;
-	
+	margin-left: 180px;
+	margin-top: 0px;
+	background-color: brown;
 }
 
 
