@@ -85,6 +85,15 @@ h2 {
 	background-color: green;
 }
 
+#hangmanLleg {
+	height: 55px;
+	width: 10px;
+	margin-left: 162px;
+	margin-top: 35px;
+	transform: rotate(20deg);
+	background-color: blue;
+}
+
 
 
 
