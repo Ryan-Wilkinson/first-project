@@ -94,6 +94,14 @@ h2 {
 	background-color: blue;
 }
 
+#hangmanRleg {
+	height: 55px;
+	width: 10px;
+	margin-left: 193px;
+	margin-top: -55px;
+	transform: rotate(-20deg);
+	background-color: blue;
+}
 
 
 
