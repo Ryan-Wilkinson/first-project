@@ -13,6 +13,10 @@ button {
 	font-size: 11px;
 }
 
+button:hover {
+	background-color: #42b9f4;
+}
+
 #hangmanInfo {
 	margin-left: 290px;
 	margin-right: 290px;

@@ -25,6 +25,7 @@ var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)]
 
 
 $('.letter').click(function() {
+	$(this).hide();
 	var pressedLetter = this.innerHTML;
 	for (var i = 0; i < ourWord.length; i++) {
 		if (pressedLetter === ourWord[i]) {
@@ -35,7 +36,7 @@ $('.letter').click(function() {
 console.log(letterIndex);
 
 	for (var i = 0; i < ourWord.length; i++) {
-		if(pressedLetter !== ourWord[i]) {
+		if(pressedLetter !== ourWord[i])  {
 			arrayReplace.push('_ ');
 		}
 		else {
