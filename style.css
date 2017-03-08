@@ -17,6 +17,7 @@ h2 {
 #game {
 	display: flex;
 	flex-wrap: wrap;
+	flex-flow: row;
 	padding-top: 40px;
 	padding-left: 50px;
 	width: 1350px;
@@ -125,7 +126,7 @@ h2 {
 }
 
 #alphabetButtons {
-	flex-wrap: wrap;
+	flex: end;
 	height: 57px;
 	width: 250px;
 	text-align: center;
