@@ -17,12 +17,16 @@ h2 {
 #game {
 	display: flex;
 	flex-wrap: wrap;
-	margin-top: 40px;
-	margin-left: 50px;
+	flex-flow: row;
+	padding-top: 40px;
+	padding-left: 50px;
+	width: 1350px;
+	height: 500px;
 }
 
 #gallows {
-	padding-bottom: 85px;
+	height: 275px;
+	width: 250px;
 }
 
 #gallowsPole {
@@ -109,14 +113,26 @@ h2 {
 }
 
 #hiddenWordContainer {
-	font-size: 50px;
+	text-align: center;
+	width: 600px;
+	height: 100px;
+}
+
+#hiddenWordSpaces {
 	flex-wrap: wrap;
+	font-size: 50px;
+	padding-left: 230px;
+	margin: 0px;
 }
 
 #alphabetButtons {
-	flex-wrap: wrap;
-	align-self: center;
+	flex: end;
+	height: 57px;
+	width: 250px;
+	padding-left: 290px;
+	text-align: center;
 }
+
 
 
 
