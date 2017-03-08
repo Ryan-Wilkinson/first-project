@@ -17,7 +17,6 @@ h2 {
 #game {
 	display: flex;
 	flex-wrap: wrap;
-	flex-flow: row;
 	padding-top: 40px;
 	padding-left: 50px;
 	width: 1350px;
@@ -28,6 +27,40 @@ h2 {
 	height: 275px;
 	width: 250px;
 }
+
+#hiddenWordContainer {
+	text-align: center;
+	width: 600px;
+	height: 100px;
+}
+
+#hiddenWordSpaces {
+	text-align: center;
+	font-size: 50px;
+	padding-left: 230px;
+	margin: 0px;
+}
+
+#alphabetButtons {
+	height: 57px;
+	width: 250px;
+	padding-left: 290px;
+	text-align: center;
+}
+
+#wordsAndButtons {
+	width: 600px;
+	height: 275px;
+	margin-right: 500px;
+}
+
+#incorrectTryBox {
+	margin-top: -80px;
+	font-size: 20px;
+}
+
+
+
 
 #gallowsPole {
 	height: 250px;
@@ -110,32 +143,6 @@ h2 {
 	margin-top: -55px;
 	transform: rotate(-20deg);
 	background-color: blue;
-}
-
-#hiddenWordContainer {
-	text-align: center;
-	width: 600px;
-	height: 100px;
-}
-
-#hiddenWordSpaces {
-	text-align: center;
-	font-size: 50px;
-	padding-left: 230px;
-	margin: 0px;
-}
-
-#alphabetButtons {
-	flex: end;
-	height: 57px;
-	width: 250px;
-	padding-left: 290px;
-	text-align: center;
-}
-
-#wordsAndButtons {
-	width: 600px;
-	height: 275px;
 }
 
 
