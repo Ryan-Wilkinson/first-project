@@ -2,7 +2,7 @@ $(document).ready(function() {
 	var chosenWord = '';
 	var ourWord = [];
 	var blankSpaces = [];
-	var letterIndex;
+	var letterIndex = [];
 	var livesLeft = 6;
 	var possibleWords = ['GENJI', 'MCCREE', 'PHARAH', 'REAPER', 'SOMBRA', 'TRACER', 'BASTION', 'HANZO', 'JUNKRAT', 'MEI', 'TORBJORN', 'WIDOWMAKER', 'DVA', 'ORISA', 'REINHARDT', 'ROADHOG', 'WINSTON', 'ZARYA', 'ANA', 'LUCIO', 'MERCY', 'SYMMETRA', 'ZENYATTA'];
 
