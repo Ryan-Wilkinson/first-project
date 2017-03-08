@@ -55,8 +55,11 @@ h2 {
 }
 
 #incorrectTryBox {
+	width: 250px;
+	height: 100px;
 	margin-top: -80px;
 	font-size: 20px;
+	text-align: center;
 }
 
 
