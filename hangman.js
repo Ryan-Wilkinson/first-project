@@ -26,11 +26,11 @@ var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)]
 
 
 $('.letter').click(function() {
-	$(this).hide();
-	var pressedLetter = this.innerHTML;
-	for (var i = 0; i < ourWord.length; i++) {
-		if (pressedLetter === ourWord[i]) {
-			blankSpaces[i] = pressedLetter;
+	$(this).hide();						// Hides the button after its pressed.
+	var pressedLetter = this.innerHTML;    // assings button pressed to var pressedLetter
+	for (var i = 0; i < ourWord.length; i++) {   // scans through every single letter in the array
+		if (pressedLetter === ourWord[i]) {    // if the letter is in the ourWord (randomly generated word) variable
+			blankSpaces[i] = pressedLetter;    // then replace that blank space with the pressed letter
 		}
 	}
 
@@ -38,31 +38,7 @@ $('.letter').click(function() {
 
 });
 
-// 	var pressedLetter 
-// 	for (var i = 0; i < ourWord.length; i++) {
-// 		if(pressedLetter !== ourWord[i])  {
-// 			arrayReplace[i] = pressedLetter
-
-// 	// 		arrayReplace.push('_ ');
-// 	// 	}
-// 	// 	else {
-// 	// 		arrayReplace.push(pressedLetter);
-// 	// 	}
-// 	// }
-
-// // blankSpaces = arrayReplace;
-// $('#secret').text((blankSpaces));
-// console.log(blankSpaces);
-// });
-
-
-
-
-
-
-
-
-
+// #1 was here vvvvvv see bottom.
 
 
 function showHangedMan() {
@@ -96,6 +72,23 @@ function showHangedMan() {
 	}
 }
 
+// <---- IM NUMBER 1 --->
+// 	var pressedLetter 
+// 	for (var i = 0; i < ourWord.length; i++) {
+// 		if(pressedLetter !== ourWord[i])  {
+// 			arrayReplace[i] = pressedLetter
 
+// 	// 		arrayReplace.push('_ ')	;
+// 	// 	}
+// 	// 	else {
+// 	// 		arrayReplace.push(pressedLetter);
+// 	// 	}
+// 	// }
+
+// // blankSpaces = arrayReplace;
+// $('#secret').text((blankSpaces));
+// console.log(blankSpaces);
+// });
+// <--- IM NUMBER 1 --->
 
 });	
