@@ -4,6 +4,7 @@ $(document).ready(function() {
 	var blankSpaces = [];
 	var letterIndex = [];
 	var arrayReplace = [];
+	var previousGuesses = [];
 	var livesLeft = 6;
 	var possibleWords = ['GENJI', 'MCCREE', 'PHARAH', 'REAPER', 'SOMBRA', 'TRACER', 'BASTION', 'HANZO', 'JUNKRAT', 'MEI', 'TORBJORN', 'WIDOWMAKER', 'DVA', 'ORISA', 'REINHARDT', 'ROADHOG', 'WINSTON', 'ZARYA', 'ANA', 'LUCIO', 'MERCY', 'SYMMETRA', 'ZENYATTA'];
 
@@ -29,26 +30,30 @@ $('.letter').click(function() {
 	var pressedLetter = this.innerHTML;
 	for (var i = 0; i < ourWord.length; i++) {
 		if (pressedLetter === ourWord[i]) {
-			letterIndex.push(i);
+			blankSpaces[i] = pressedLetter;
 		}
 	}
 
-console.log(letterIndex);
-
-	for (var i = 0; i < ourWord.length; i++) {
-		if(pressedLetter !== ourWord[i])  {
-			arrayReplace.push('_ ');
-		}
-		else {
-			arrayReplace.push(pressedLetter);
-		}
-	}
-
-blankSpaces = arrayReplace;
-$('#secret').text((blankSpaces));
-console.log(blankSpaces);
+		$('.secretClass').text(blankSpaces.join(' '));
 
 });
+
+// 	var pressedLetter 
+// 	for (var i = 0; i < ourWord.length; i++) {
+// 		if(pressedLetter !== ourWord[i])  {
+// 			arrayReplace[i] = pressedLetter
+
+// 	// 		arrayReplace.push('_ ');
+// 	// 	}
+// 	// 	else {
+// 	// 		arrayReplace.push(pressedLetter);
+// 	// 	}
+// 	// }
+
+// // blankSpaces = arrayReplace;
+// $('#secret').text((blankSpaces));
+// console.log(blankSpaces);
+// });
 
 
 
