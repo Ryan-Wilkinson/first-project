@@ -3,6 +3,7 @@ $(document).ready(function() {
 	var ourWord = [];
 	var blankSpaces = [];
 	var letterIndex = [];
+	var arrayReplace = [];
 	var livesLeft = 6;
 	var possibleWords = ['GENJI', 'MCCREE', 'PHARAH', 'REAPER', 'SOMBRA', 'TRACER', 'BASTION', 'HANZO', 'JUNKRAT', 'MEI', 'TORBJORN', 'WIDOWMAKER', 'DVA', 'ORISA', 'REINHARDT', 'ROADHOG', 'WINSTON', 'ZARYA', 'ANA', 'LUCIO', 'MERCY', 'SYMMETRA', 'ZENYATTA'];
 
@@ -24,13 +25,28 @@ var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)]
 
 
 $('.letter').click(function() {
-	var theLetter = this.innerHTML;
+	var pressedLetter = this.innerHTML;
 	for (var i = 0; i < ourWord.length; i++) {
-		if (theLetter === ourWord[i]) {
+		if (pressedLetter === ourWord[i]) {
 			letterIndex.push(i);
 		}
 	}
+
 console.log(letterIndex);
+
+	for (var i = 0; i < ourWord.length; i++) {
+		if(pressedLetter !== ourWord[i]) {
+			arrayReplace.push('_ ');
+		}
+		else {
+			arrayReplace.push(pressedLetter);
+		}
+	}
+
+blankSpaces = arrayReplace;
+$('#secret').text((blankSpaces));
+console.log(blankSpaces);
+
 });
 
 
