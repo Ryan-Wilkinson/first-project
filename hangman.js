@@ -22,7 +22,8 @@ var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)]
 		blankSpaces.push('_ ');
 }
 	$('#secret').append((blankSpaces));
-	alert(ourWord);
+	$('#livesLeftNumber').text(6);           // adds 6 lives when start is clicked
+	alert(ourWord);                     // adds alert of the random word chosen, remember to comment out after presentations
 });
 
 
