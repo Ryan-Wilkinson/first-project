@@ -36,8 +36,9 @@ $('.letter').click(function() {
 	}
 
 		$('.secretClass').text(blankSpaces.join(' '));
-			if (blankSpaces.indexOf('_ ') === -1) {
-				alert('Congrats! You Win!');
+			if (blankSpaces.indexOf('_ ') === -1) {     // after each cycle of scanning for the letter it also scans for blank spaces
+				$('#incorrectTryBox').text('You Win!'); // writes over lives section if no spaces in the word
+				// alert('Congrats! You Win!');
 			}
 });
 
