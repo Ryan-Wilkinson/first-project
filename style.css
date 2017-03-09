@@ -44,14 +44,14 @@ button:hover {
 
 #hiddenWordContainer {
 	text-align: center;
-	width: 600px;
+	width: 650px;
 	height: 100px;
 }
 
 #secret {
 	text-align: center;
-	font-size: 50px;
-	padding-left: 230px;
+	font-size: 45px;
+	padding-left: 180px;
 	margin: 0px;
 }
 

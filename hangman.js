@@ -5,7 +5,8 @@ $(document).ready(function() {
 	var letterIndex = [];
 	var arrayReplace = [];
 	var previousGuesses = [];
-	var livesLeft = 6;
+	var livesLeft = $('#livesLeftNumber');  // added in while making lives counter
+	var lives = 6							// added in while making lives counter
 	var possibleWords = ['GENJI', 'MCCREE', 'PHARAH', 'REAPER', 'SOMBRA', 'TRACER', 'BASTION', 'HANZO', 'JUNKRAT', 'MEI', 'TORBJORN', 'WIDOWMAKER', 'DVA', 'ORISA', 'REINHARDT', 'ROADHOG', 'WINSTON', 'ZARYA', 'ANA', 'LUCIO', 'MERCY', 'SYMMETRA', 'ZENYATTA'];
 
 
@@ -35,10 +36,13 @@ $('.letter').click(function() {
 	}
 
 		$('.secretClass').text(blankSpaces.join(' '));
-
+			if (blankSpaces.indexOf('_ ') === -1) {
+				alert('Congrats! You Win!');
+			}
 });
 
 // #1 was here vvvvvv see bottom.
+
 
 
 function showHangedMan() {
