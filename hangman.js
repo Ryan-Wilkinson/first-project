@@ -13,7 +13,7 @@ $(document).ready(function() {
 // var resetTheGame = function() {
 // 	var lives = 6;	
 // 	var chosenWord = '';
-// 	var ourWord = [];
+// 	var ourWord = [];						FUCKING JUNK MIGHT COME BACK AND TRY AND USE
 // 	var blankSpaces = [];
 // 	var letterIndex = [];
 // 	var arrayReplace = [];
@@ -23,14 +23,14 @@ $(document).ready(function() {
 
  // when clicking the start button, run this function
 $('#newGame').click(function() {
-var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];
+var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];  // randomly picks a word from the array
 	for (var i = 0; i < chosenWord.length; i++) {
 		ourWord.push(chosenWord[i]);
 		blankSpaces.push('_ ');
 }
 	$('#secret').append((blankSpaces));
 	$('#livesLeftNumber').text(lives);  // displays lives on the dom when start game is clicked
-	showHangedMan(lives);
+	showHangedMan(lives);   // starts the hanged man switch function
 	alert(chosenWord);   // adds alert of the random word chosen, remember to comment out after presentations
 });                
 
@@ -54,7 +54,7 @@ $('.letter').click(function() {
 			}
 		if (!(ourWord.indexOf(pressedLetter) > -1)) {
 			lives -= 1;
-			showHangedMan(lives);
+			showHangedMan(lives);					// everytime lives counts down goes through the switch/case
 			$('#livesLeftNumber').text(lives);
 			// console.log(lives);    'for testing, remove later'
 			}	
