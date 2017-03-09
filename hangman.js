@@ -35,10 +35,12 @@ var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)]
 // when clicking ANY of the letter buttons run this function
 function clickingLetterButtons() {
 	$(this).hide();						// Hides the button after its pressed.
+	var correctGuess = false;
 	var pressedLetter = this.innerHTML;    // assings button pressed to var pressedLetter
 	for (var i = 0; i < ourWord.length; i++) {   // scans through every single letter in the array
 		if (pressedLetter === ourWord[i]) {    // if the letter is in the ourWord (randomly generated word) variable
-			blankSpaces[i] = pressedLetter;    // then replace that blank space with the pressed letter
+			blankSpaces[i] = pressedLetter;   // then replace that blank space with the pressed letter
+			lives += 1;
 		}
 	}
 
@@ -47,17 +49,22 @@ function clickingLetterButtons() {
 				$('#incorrectTryBox').text('You Win!'); // writes over lives section if no spaces in the word
 				// alert('Congrats! You Win!');
 			}
-		var p = (ourWord.indexOf(pressedLetter));
-			if (p === -1); {
+		// var p = (ourWord.indexOf(pressedLetter));
+			if (pressedLetter != '' && !correctGuess); {
 				lives -= 1;
 				$('#livesLeftNumber').text(lives);
 				// console.log(lives);
 			}	
+			// if (lives < 1); {
+			// 	$('#incorrectTryBox').text('GAME OVER!');
+			// }
+
+			
 };
 
 
 // function livesCounter() {
-	
+
 // }
 // #1 was here vvvvvv see bottom.
 
