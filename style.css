@@ -50,6 +50,7 @@ button:hover {
 }
 
 #hiddenWordContainer {
+	font-family: 'Permanent Marker', cursive;
 	text-align: center;
 	width: 650px;
 	height: 100px;
@@ -76,6 +77,7 @@ button:hover {
 }
 
 #incorrectTryBox {
+	font-family: 'Permanent Marker', cursive;
 	width: 250px;
 	height: 100px;
 	margin-top: -80px;
