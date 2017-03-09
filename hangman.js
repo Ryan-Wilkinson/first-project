@@ -45,7 +45,7 @@ $('.letter').click(function() {
 		}
 	}
 
-		$('.secretClass').text(blankSpaces.join(' '));
+		$('.secretClass').text(blankSpaces.join(' ')); // connects the letters in the array writes it into the answer area
 
 		if (blankSpaces.indexOf('_ ') === -1) {     // after each cycle of scanning for the letter it also scans for blank spaces
 			$('#incorrectTryBox').text('You Win!'); // writes over lives section if no spaces in the word
