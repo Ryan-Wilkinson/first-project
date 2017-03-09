@@ -44,9 +44,15 @@ footer {
 	height: 500px;
 }
 
-#newGame {
+#startGame {
 	text-align: center;
 	padding-top: 25px;
+	padding-left: 222px;
+}
+
+#restartGame {
+	text-align: center;
+	padding-top: 10px;
 	padding-left: 222px;
 }
 
