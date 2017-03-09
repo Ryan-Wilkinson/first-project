@@ -25,10 +25,10 @@ $(document).ready(function() {
 $('#newGame').click(function() {
 var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];  // randomly picks a word from the array
 	for (var i = 0; i < chosenWord.length; i++) {
-		ourWord.push(chosenWord[i]);
+		ourWord.push(chosenWord[i]);		// puts in _ for the length of the word
 		blankSpaces.push('_ ');
 }
-	$('#secret').append((blankSpaces));
+	$('#secret').append((blankSpaces));      // puts all the _'s in the dom in the div with the 'secret' id
 	$('#livesLeftNumber').text(lives);  // displays lives on the dom when start game is clicked
 	showHangedMan(lives);   // starts the hanged man switch function
 	alert(chosenWord);   // adds alert of the random word chosen, remember to comment out after presentations
