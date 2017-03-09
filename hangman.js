@@ -67,8 +67,8 @@ $('.letter').click(function() {
 
 // #1 was here vvvvvv see bottom.
 
-var showHangedMan = function(x) {
-	switch (x) {
+var showHangedMan = function(thanksLiam) {    // thanks for helping me liam 
+	switch (thanksLiam) {
 		case 6:
 				$('#hangmanHead').hide();
 				$('#hangmanBody').hide();
