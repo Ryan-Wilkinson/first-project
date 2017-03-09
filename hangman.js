@@ -29,7 +29,8 @@ var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)]
 		blankSpaces.push('_ ');
 }
 	$('#secret').append((blankSpaces));
-	$('#livesLeftNumber').text(6);           // adds 6 lives when start is clicked
+	$('#livesLeftNumber').text(lives);  // displays lives on the dom when start game is clicked
+	showHangedMan(lives);
 	alert(chosenWord);   // adds alert of the random word chosen, remember to comment out after presentations
 });                
 
@@ -53,6 +54,7 @@ $('.letter').click(function() {
 			}
 		if (!(ourWord.indexOf(pressedLetter) > -1)) {
 			lives -= 1;
+			showHangedMan(lives);
 			$('#livesLeftNumber').text(lives);
 			// console.log(lives);    'for testing, remove later'
 			}	
@@ -65,9 +67,9 @@ $('.letter').click(function() {
 
 // #1 was here vvvvvv see bottom.
 
-var showHangedMan = function() {
-	switch (cow) {
-		case 0:
+var showHangedMan = function(x) {
+	switch (x) {
+		case 6:
 				$('#hangmanHead').hide();
 				$('#hangmanBody').hide();
 				$('#hangmanLarm').hide();
@@ -75,22 +77,22 @@ var showHangedMan = function() {
 				$('#hangmanLleg').hide();
 				$('#hangmanRleg').hide();
 					break;
-		case 1:
+		case 5:
 				$('#hangmanHead').show();
 					break;
-		case 2:
+		case 4:
 				$('#hangmanBody').show();
 					break;
 		case 3:
 				$('#hangmanLarm').show();
 					break;
-		case 4:
+		case 2:
 				$('#hangmanRarm').show();
 					break;
-		case 5:
+		case 1:
 				$('#hangmanLleg').show();
 					break;			
-		case 6:
+		case 0:
 				$('#hangmanRleg').show();
 					break;
 		default:
