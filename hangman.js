@@ -5,17 +5,12 @@ $(document).ready(function() {
 	var letterIndex = [];
 	var arrayReplace = [];
 	var previousGuesses = [];
-	// var livesLeft = $('#livesLeftNumber');  // added in while making lives counter
-	var lives = 6;							// added in while making lives counter
+	var lives = 6;							
 	var possibleWords = ['GENJI', 'MCCREE', 'PHARAH', 'REAPER', 'SOMBRA', 'TRACER', 'BASTION', 'HANZO', 'JUNKRAT', 'MEI', 'TORBJORN', 'WIDOWMAKER', 'DVA', 'ORISA', 'REINHARDT', 'ROADHOG', 'WINSTON', 'ZARYA', 'ANA', 'LUCIO', 'MERCY', 'SYMMETRA', 'ZENYATTA'];
 
 
-// converts words to '_ '
-$('#newGame').on('click', newGameClick) // When clicked runs the newGameClick function
-$('.letter').on('click', clickingLetterButtons) // when clicked runs the clickingLetterButtons function
-
 // Reset game function, have it being called when you either win or lose.
-// function resetTheGame() {
+// var resetTheGame = function() {
 // 	var lives = 6;	
 // 	var chosenWord = '';
 // 	var ourWord = [];
@@ -23,10 +18,11 @@ $('.letter').on('click', clickingLetterButtons) // when clicked runs the clickin
 // 	var letterIndex = [];
 // 	var arrayReplace = [];
 // 	var previousGuesses = [];
+// 	// alert('HEY I RESET!');
 // };
 
  // when clicking the start button, run this function
-function newGameClick() {
+$('#newGame').click(function() {
 var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];
 	for (var i = 0; i < chosenWord.length; i++) {
 		ourWord.push(chosenWord[i]);
@@ -34,12 +30,12 @@ var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)]
 }
 	$('#secret').append((blankSpaces));
 	$('#livesLeftNumber').text(6);           // adds 6 lives when start is clicked
-	alert(ourWord);  
-};                 // adds alert of the random word chosen, remember to comment out after presentations
+	alert(chosenWord);   // adds alert of the random word chosen, remember to comment out after presentations
+});                
 
 
 // when clicking ANY of the letter buttons run this function
-function clickingLetterButtons() {
+$('.letter').click(function() {
 	$(this).hide();						// Hides the button after its pressed.
 	var pressedLetter = this.innerHTML;    // assings button pressed to var pressedLetter
 	for (var i = 0; i < ourWord.length; i++) {   // scans through every single letter in the array
@@ -52,33 +48,25 @@ function clickingLetterButtons() {
 
 		if (blankSpaces.indexOf('_ ') === -1) {     // after each cycle of scanning for the letter it also scans for blank spaces
 			$('#incorrectTryBox').text('You Win!'); // writes over lives section if no spaces in the word
-			// alert('Congrats! You Win!');
+			setTimeout(location.reload.bind(location), 5000);    // after you win refreshes the page after 5 seconds to start over
+			// alert('Congrats! You Win!');   'for testing remove later'
 			}
 		if (!(ourWord.indexOf(pressedLetter) > -1)) {
 			lives -= 1;
 			$('#livesLeftNumber').text(lives);
-				// console.log(lives);
+			// console.log(lives);    'for testing, remove later'
 			}	
 		if (lives < 1) {
 			$('#incorrectTryBox').text('GAME OVER!!!!');
+			setTimeout(location.reload.bind(location), 5000); // after you lose refreshes the page after 5 seconds to start over
 		}
 		// var p = (ourWord.indexOf(pressedLetter));
-};
-
-
-// function livesCounter() {
-// if (lives < 1); {
-// $('#incorrectTryBox').text('GAME OVER!');
-// }	
-// };
+});
 
 // #1 was here vvvvvv see bottom.
 
-
-
-
-function showHangedMan() {
-	switch (livesLeft) {
+var showHangedMan = function() {
+	switch (cow) {
 		case 0:
 				$('#hangmanHead').hide();
 				$('#hangmanBody').hide();
@@ -104,6 +92,8 @@ function showHangedMan() {
 					break;			
 		case 6:
 				$('#hangmanRleg').show();
+					break;
+		default:
 					break;
 	}
 }
