@@ -5,7 +5,7 @@ $(document).ready(function() {
 	var letterIndex = [];
 	var arrayReplace = [];
 	var previousGuesses = [];
-	var livesLeft = $('#livesLeftNumber');  // added in while making lives counter
+	// var livesLeft = $('#livesLeftNumber');  // added in while making lives counter
 	var lives = 6							// added in while making lives counter
 	var possibleWords = ['GENJI', 'MCCREE', 'PHARAH', 'REAPER', 'SOMBRA', 'TRACER', 'BASTION', 'HANZO', 'JUNKRAT', 'MEI', 'TORBJORN', 'WIDOWMAKER', 'DVA', 'ORISA', 'REINHARDT', 'ROADHOG', 'WINSTON', 'ZARYA', 'ANA', 'LUCIO', 'MERCY', 'SYMMETRA', 'ZENYATTA'];
 
@@ -15,7 +15,11 @@ $(document).ready(function() {
 
 
 // converts words to '_ '
-$('#newGame').click(function() {
+$('#newGame').on('click', newGameClick) // When clicked runs the newGameClick function
+$('.letter').on('click', clickingLetterButtons) // when clicked runs the clickingLetterButtons function
+
+
+function newGameClick() {
 var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];
 	for (var i = 0; i < chosenWord.length; i++) {
 		ourWord.push(chosenWord[i]);
@@ -23,11 +27,11 @@ var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)]
 }
 	$('#secret').append((blankSpaces));
 	$('#livesLeftNumber').text(6);           // adds 6 lives when start is clicked
-	alert(ourWord);                     // adds alert of the random word chosen, remember to comment out after presentations
-});
+	alert(ourWord);  
+};                 // adds alert of the random word chosen, remember to comment out after presentations
 
 
-$('.letter').click(function() {
+function clickingLetterButtons() {
 	$(this).hide();						// Hides the button after its pressed.
 	var pressedLetter = this.innerHTML;    // assings button pressed to var pressedLetter
 	for (var i = 0; i < ourWord.length; i++) {   // scans through every single letter in the array
@@ -41,9 +45,15 @@ $('.letter').click(function() {
 				$('#incorrectTryBox').text('You Win!'); // writes over lives section if no spaces in the word
 				// alert('Congrats! You Win!');
 			}
-});
+		var p = (ourWord.indexOf(pressedLetter));
+			if (p === -1);{
+				lives -= 1;
+				$('.livesLeftNumberClass').text(lives);
+			}	
+};
 
 // #1 was here vvvvvv see bottom.
+
 
 
 
