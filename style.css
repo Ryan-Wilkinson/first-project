@@ -24,6 +24,11 @@ button:hover {
 	background-color: #42b9f4;
 }
 
+footer {
+	text-align: center;
+	font-family: 'Architects Daughter', cursive;
+}
+
 #hangmanInfo {
 	font-family: 'Architects Daughter', cursive;
 	margin-left: 290px;
@@ -70,6 +75,10 @@ button:hover {
 	margin: 0px;
 	padding-left: 70px;
 	text-align: center;
+}
+
+.letter {
+	padding-top: 2px;
 }
 
 #wordsAndButtons {
