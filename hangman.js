@@ -10,14 +10,20 @@ $(document).ready(function() {
 	var possibleWords = ['GENJI', 'MCCREE', 'PHARAH', 'REAPER', 'SOMBRA', 'TRACER', 'BASTION', 'HANZO', 'JUNKRAT', 'MEI', 'TORBJORN', 'WIDOWMAKER', 'DVA', 'ORISA', 'REINHARDT', 'ROADHOG', 'WINSTON', 'ZARYA', 'ANA', 'LUCIO', 'MERCY', 'SYMMETRA', 'ZENYATTA'];
 
 
-
-// array of random words for the game
-
-
 // converts words to '_ '
 $('#newGame').on('click', newGameClick) // When clicked runs the newGameClick function
 $('.letter').on('click', clickingLetterButtons) // when clicked runs the clickingLetterButtons function
 
+// Reset game function, have it being called when you either win or lose.
+// function resetTheGame() {
+// 	var lives = 6;	
+// 	var chosenWord = '';
+// 	var ourWord = [];
+// 	var blankSpaces = [];
+// 	var letterIndex = [];
+// 	var arrayReplace = [];
+// 	var previousGuesses = [];
+// };
 
  // when clicking the start button, run this function
 function newGameClick() {
@@ -35,37 +41,37 @@ var chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)]
 // when clicking ANY of the letter buttons run this function
 function clickingLetterButtons() {
 	$(this).hide();						// Hides the button after its pressed.
-	var correctGuess = false;
 	var pressedLetter = this.innerHTML;    // assings button pressed to var pressedLetter
 	for (var i = 0; i < ourWord.length; i++) {   // scans through every single letter in the array
 		if (pressedLetter === ourWord[i]) {    // if the letter is in the ourWord (randomly generated word) variable
 			blankSpaces[i] = pressedLetter;   // then replace that blank space with the pressed letter
-			lives += 1;
 		}
 	}
 
 		$('.secretClass').text(blankSpaces.join(' '));
-			if (blankSpaces.indexOf('_ ') === -1) {     // after each cycle of scanning for the letter it also scans for blank spaces
-				$('#incorrectTryBox').text('You Win!'); // writes over lives section if no spaces in the word
-				// alert('Congrats! You Win!');
+
+		if (blankSpaces.indexOf('_ ') === -1) {     // after each cycle of scanning for the letter it also scans for blank spaces
+			$('#incorrectTryBox').text('You Win!'); // writes over lives section if no spaces in the word
+			// alert('Congrats! You Win!');
 			}
-		// var p = (ourWord.indexOf(pressedLetter));
-			if (pressedLetter != '' && !correctGuess); {
-				lives -= 1;
-				$('#livesLeftNumber').text(lives);
+		if (!(ourWord.indexOf(pressedLetter) > -1)) {
+			lives -= 1;
+			$('#livesLeftNumber').text(lives);
 				// console.log(lives);
 			}	
-			// if (lives < 1); {
-			// 	$('#incorrectTryBox').text('GAME OVER!');
-			// }
-
-			
+		if (lives < 1) {
+			$('#incorrectTryBox').text('GAME OVER!!!!');
+		}
+		// var p = (ourWord.indexOf(pressedLetter));
 };
 
 
 // function livesCounter() {
+// if (lives < 1); {
+// $('#incorrectTryBox').text('GAME OVER!');
+// }	
+// };
 
-// }
 // #1 was here vvvvvv see bottom.
 
 
