@@ -11,11 +11,17 @@ from a list of preset words. You will have six lives to try and guess the word c
 ## Trello Board
 [Hangman Trello Flow](https://trello.com/b/6Z3myJRZ/first-project)
 
-## Pictures
+## Wireframes
 ### First Sketch
 [First Design Layout](http://i.imgur.com/125YbeQ.jpg)
 With this I orginally wanted to do boxes and and overlay them and hide certain sides to make the actual hanged man. Did not go this route, no clue why I thought this would be a good idea.
 
+### Start-Game
+[Start-Game](https://github.com/Ryan-Wilkinson/hangman/blob/master/When-Start-Is-Clicked.png)
+
+### Playing Through
+[Play-Through](https://github.com/Ryan-Wilkinson/hangman/blob/master/Letters%20in%2C%20Lives%20lost.png)
+
 ### First Iteration of the Array Manipulation
-[Awkward Methodology](http://i.imgur.com/nxAXj82.png)
+[Awkward Methodology](https://github.com/Ryan-Wilkinson/hangman/blob/master/First-Iteration.png)
 Was trying to make a new array of the word when it swept through and checked for the letter, however it would overwrite any letters before it because it would check just for the letter that was pressed, if it didnt match it would place a dash.
