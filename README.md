@@ -32,6 +32,6 @@ Was trying to make a new array of the word when it swept through and checked for
 - HTML/CSS
 - Jquery
 - Materialize
-- Stack Ovewrflow
+- Stack Overflow
 - GOOGLE
 - Trello
