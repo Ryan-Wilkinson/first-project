@@ -68,6 +68,7 @@ function letterClick() {
 			}	
 		if (lives < 1) {
 			$('#incorrectTryBox').text('GAME OVER!!!!');
+			$('.secretClass').text(ourWord.join(' '));   // added in to show the word when you lose
 			setTimeout(location.reload.bind(location), 5000); // after you lose refreshes the page after 5 seconds to start over
 		}
 		// var p = (ourWord.indexOf(pressedLetter));
