@@ -27,3 +27,11 @@ With this I orginally wanted to do boxes and and overlay them and hide certain s
 Was trying to make a new array of the word when it swept through and checked for the letter, however it would overwrite any letters before it because it would check just for the letter that was pressed, if it didnt match it would place a dash.
 
 ![Awkward Methodology](https://github.com/Ryan-Wilkinson/hangman/blob/master/First-Iteration.png)
+
+## Tools Used
+- HTML/CSS
+- Jquery
+- Materialize
+- Stack Ovewrflow
+- GOOGLE
+- Trello
