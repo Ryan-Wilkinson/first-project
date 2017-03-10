@@ -40,7 +40,7 @@ function startGameClick() {
 	$('#secret').append((blankSpaces));      // puts all the _'s in the dom in the div with the 'secret' id
 	$('#livesLeftNumber').text(lives);  // displays lives on the dom when start game is clicked
 	showHangedMan(lives);   // starts the hanged man switch function
-	alert(chosenWord);   // adds alert of the random word chosen, remember to comment out after presentations
+	// alert(chosenWord);   // adds alert of the random word chosen, remember to comment out after presentations
 };                
 
 
