@@ -32,8 +32,12 @@ footer {
 
 #hangmanInfo {
 	font-family: 'Architects Daughter', cursive;
-	margin-left: 290px;
-	margin-right: 290px;
+	text-align: center;
+	text-overflow: ellipsis;
+	padding-left: 100px;
+	padding-right: 100px;
+/*	margin-left: 290px;
+	margin-right: 290px;*/
 }
 
 #game {

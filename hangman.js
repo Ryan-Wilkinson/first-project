@@ -27,7 +27,6 @@ $('.letter').on('click', letterClick)
 // 	var arrayReplace = [];
 // 	var previousGuesses = [];
 // 	var lives = 6;
-// 	startGameClick();
 // };
 
  // when clicking the start button, run this function
