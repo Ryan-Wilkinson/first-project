@@ -6,7 +6,7 @@ For the first project I decided to go with re-creating the timeless game: Hangma
 from a list of preset words. You will have six lives to try and guess the word correctly. You use the alphabet buttons to go through and pick the letters you would like to guess. If the letter you choose is not in the word you will lose a word and the hangman will start to appear. After six incorrect guesses the entire hangman is displayed and you will lose the game. However if you manage to guess the word correctly you win. After either winnin or losing the game will restart after five seconds.
 
 ## Link to the IO
-[Hangman Webpage](https://ryan-wilkinson.github.io/)
+[Hangman Webpage](http://ryan-wilkinson-hangman.bitballoon.com/)
 
 ## Trello Board
 [Hangman Trello Flow](https://trello.com/b/6Z3myJRZ/first-project)
